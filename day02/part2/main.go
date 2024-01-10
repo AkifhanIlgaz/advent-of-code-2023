@@ -4,8 +4,8 @@ func Solve(lines []string) int {
 	sumOfPowers := 0
 
 	for _, line := range lines {
-		game := parseGame(line)
-		sumOfPowers += game.findFewestNumOfCubes().Power()
+		game := convertLineToGame(line)
+		sumOfPowers += game.findFewestNumOfCubes().power()
 	}
 
 	return sumOfPowers

@@ -10,8 +10,8 @@ type Game struct {
 	Sets []Set
 }
 
-func parseGame(g string) Game {
-	parsed := strings.Split(g, ":")
+func convertLineToGame(line string) Game {
+	parsed := strings.Split(line, ":")
 
 	return Game{
 		Sets: parseSets(parsed[1]),
@@ -36,7 +36,7 @@ type Set struct {
 	Blue  int
 }
 
-func (s Set) Power() int {
+func (s Set) power() int {
 	return s.Red * s.Green * s.Blue
 }
 

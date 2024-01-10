@@ -27,8 +27,8 @@ func (game Game) isPossible() bool {
 	return true
 }
 
-func parseGame(g string) Game {
-	parsed := strings.Split(g, ":")
+func convertLineToGame(line string) Game {
+	parsed := strings.Split(line, ":")
 
 	return Game{
 		Id:   parseGameId(parsed[0]),
