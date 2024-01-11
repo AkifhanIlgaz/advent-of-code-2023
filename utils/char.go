@@ -1,5 +1,5 @@
 package utils
 
-func StringDigitToInt(s byte) int {
+func StringDigitToInt[T rune | byte](s T) int {
 	return int(s - '0')
 }
