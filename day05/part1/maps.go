@@ -1,5 +1,15 @@
 package part1
 
+const (
+	SeedToSoil            = "seed-to-soil"
+	SoilToFertilizer      = "soil-to-fertilizer"
+	FertilizerToWater     = "fertilizer-to-water"
+	WaterToLight          = "water-to-light"
+	LightToTemperature    = "light-to-temperature"
+	TemperatureToHumidity = "temperature-to-humidity"
+	HumidityToLocation    = "humidity-to-location"
+)
+
 type Maps struct {
 	SeedToSoil            map[int]int
 	SoilToFertilizer      map[int]int

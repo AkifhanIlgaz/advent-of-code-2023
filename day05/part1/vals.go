@@ -8,19 +8,19 @@ import (
 
 
 
-type Vals struct {
+type Ranges struct {
 	DestinationRange []int
 	SourceRange      []int
 }
 
-func convertLineToVals(line string) Vals {
-	vals := strings.Fields(line)
-	destinationStart, sourceStart, rangeLength := utils.Atoi(vals[0]), utils.Atoi(vals[1]),utils.Atoi(vals[2])
+func convertLineToVals(line string) Ranges {
+	ranges := strings.Fields(line)
+	destinationStart, sourceStart, rangeLength := utils.Atoi(ranges[0]), utils.Atoi(ranges[1]),utils.Atoi(ranges[2])
 
 	destinationRange := applyRange(destinationStart, rangeLength)
 	sourceRange := applyRange(sourceStart, rangeLength)
 
-	return Vals{
+	return Ranges{
 		DestinationRange: destinationRange,
 		SourceRange: sourceRange,
 	}
